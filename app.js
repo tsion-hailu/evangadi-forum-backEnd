@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const port = 5500;
-const cors = require('cors')
+const cors = require("cors");
 app.use(cors());
+const dotenv = require("dotenv");
+dotenv.config();
 // db connection
 const dbConnection = require("./db/dbConfig");
 
@@ -11,7 +13,7 @@ const userRoutes = require("./routes/userRoute");
 //question routes middleware file
 const questionsRoute = require("./routes/questionRoute");
 //answer routes middleware file
-const answerRoute=require("./routes/answerRoute")
+const answerRoute = require("./routes/answerRoute");
 
 //authentication middleware
 const authMiddleware = require("./middleware/authMiddleware");
